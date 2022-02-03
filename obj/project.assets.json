@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gatog\\OneDrive\\ITQ\\Cuarto Semestre\\Automatas I\\Automatas I.csproj",
+      "projectUniqueName": "C:\\Users\\gatog\\OneDrive\\ITQ\\Cuarto Semestre\\Automatas I\\Programa 1\\Automatas I.csproj",
       "projectName": "Automatas I",
-      "projectPath": "C:\\Users\\gatog\\OneDrive\\ITQ\\Cuarto Semestre\\Automatas I\\Automatas I.csproj",
+      "projectPath": "C:\\Users\\gatog\\OneDrive\\ITQ\\Cuarto Semestre\\Automatas I\\Programa 1\\Automatas I.csproj",
       "packagesPath": "C:\\Users\\gatog\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gatog\\OneDrive\\ITQ\\Cuarto Semestre\\Automatas I\\obj\\",
+      "outputPath": "C:\\Users\\gatog\\OneDrive\\ITQ\\Cuarto Semestre\\Automatas I\\Programa 1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

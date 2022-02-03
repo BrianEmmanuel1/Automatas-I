@@ -6,9 +6,21 @@ namespace Automatas_I
 {
     public class archivo
     {
-        
-        StreamReader Archivo = new StreamReader("C:\\Users\\gatog\\OneDrive\\ITQ\\Cuarto Semestre\\Automatas I\\Prueba.txt");
-        StreamWriter Copia = new StreamWriter("C:\\Users\\gatog\\OneDrive\\ITQ\\Cuarto Semestre\\Automatas I\\Copia.txt");
+        StreamReader Archivo;
+        StreamWriter Copia;
+
+        public archivo()
+        { 
+            Archivo = new StreamReader("C:\\Users\\gatog\\OneDrive\\ITQ\\Cuarto Semestre\\Automatas I\\Programa 1\\Prueba.txt");
+            Copia   = new StreamWriter("C:\\Users\\gatog\\OneDrive\\ITQ\\Cuarto Semestre\\Automatas I\\Programa 1\\Copia.txt");
+            Copia.AutoFlush = true;
+        }
+
+        public void Cerrar()
+        {
+            Archivo.Close();
+            Copia.Close();
+        }
 
         public void desplegar()
         {
@@ -39,9 +51,43 @@ namespace Automatas_I
             Console.WriteLine("\n\nSe encontraron {0} letras" +
             ", {1} numeros y  {2} espacios", Letras, Num, Esp);
 
-            Archivo.Close();
-            Copia.Close();
+        }
 
+        public void Palabras()
+        {
+            char c;
+            string Buffer = "";
+
+            while(!Archivo.EndOfStream)
+            {    
+                c = (char) Archivo.Read(); 
+                
+                Buffer = (char.IsLetterOrDigit(c)) ? Buffer+=c : Buffer; 
+                
+                if (char.IsWhiteSpace(c) && Buffer != "" ) 
+                {  
+                    Copia.WriteLine(Buffer); 
+                    Buffer = "";
+                }
+                
+            }
+        }
+        public void NextToken()
+        {
+            char c = ' ';
+            string Buffer = "";
+
+            while(char.IsWhiteSpace(c = (char) Archivo.Read()));
+
+            if(char.IsLetter(c))
+            {
+                Buffer += c;
+                while(char.IsLetterOrDigit(c = (char) Archivo.Read()))
+                {
+                    Buffer+=c;
+                }
+                Copia.WriteLine(Buffer);
+            }
 
         }
     }
