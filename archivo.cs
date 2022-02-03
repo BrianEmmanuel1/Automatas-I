@@ -9,6 +9,7 @@ namespace Automatas_I
         StreamReader Archivo;
         StreamWriter Copia;
 
+        //Constructor
         public archivo()
         { 
             Archivo = new StreamReader("C:\\Users\\gatog\\OneDrive\\ITQ\\Cuarto Semestre\\Automatas I\\Programa 1\\Prueba.txt");
